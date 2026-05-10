@@ -1,18 +1,29 @@
+// 1. Описываем чертеж нашей точки
+class Point {
+    public double x;
+    public double y;
 
+    // Метод, который превращает данные точки в красивую строку
+    public String toString() {
+        return "Punkt ma współrzędne: x = " + x + ", y = " + y;
+    }
+}
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// 2. Основной класс, где мы будем выполнять задание
+public class Main {
+    public static void main(String[] args) {
+        // Создаем объект (экземпляр) класса Point
+        Point myPoint = new Point();
 
+        // Устанавливаем значения полей (Ustaw pola)
+        myPoint.x = 5.5;
+        myPoint.y = 10.0;
 
+        // Выводим поля напрямую (Wyświetl pola)
+        System.out.println("Координата X: " + myPoint.x);
+        System.out.println("Координата Y: " + myPoint.y);
 
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
-
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        // Используем наш метод toString() для вывода всей информации
+        System.out.println(myPoint.toString());
     }
 }
