@@ -1,13 +1,4 @@
-// 1. Описываем чертеж нашей точки
-class Point {
-    public double x;
-    public double y;
 
-    // Метод, который превращает данные точки в красивую строку
-    public String toString() {
-        return "Punkt ma współrzędne: x = " + x + ", y = " + y;
-    }
-}
 
 // 2. Основной класс, где мы будем выполнять задание
 public class Main {
@@ -20,10 +11,15 @@ public class Main {
         myPoint.y = 10.0;
 
         // Выводим поля напрямую (Wyświetl pola)
-        System.out.println("Координата X: " + myPoint.x);
-        System.out.println("Координата Y: " + myPoint.y);
-
-        // Используем наш метод toString() для вывода всей информации
-        System.out.println(myPoint.toString());
+        myPoint.translate(10,10);
+        Point p2 = myPoint.translated(1,1);
+        Segment seg = new Segment();
+        seg.a=myPoint;
+        seg.b=p2;
+        //System.out.println(myPoint.toString());
+        //System.out.println(myPoint.toSVG());
+        //System.out.println(p2.toString());
+        System.out.println(seg.length());
     }
+
 }
